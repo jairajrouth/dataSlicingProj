@@ -7,6 +7,7 @@ import { DataModuleComponent } from './components/data-module/data-module.compon
 import { ChartModuleComponent } from './components/chart-module/chart-module.component';
 import { AppMaterialsModule } from './app-material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     AppMaterialsModule,
     BrowserAnimationsModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

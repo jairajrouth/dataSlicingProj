@@ -9,9 +9,22 @@ export class DataModuleComponent implements OnInit {
 
   constructor() { }
 
+  name = 'Dynamic Add Fields';
+  rows = [];
+  values = [];
   ngOnInit() {
   }
 
-
+  addField(){
+    this.rows.push({value : ""});
+    console.log('Button Clicked')
+  }
   
+  removeField(i){
+    this.rows.splice(i,1);
+  }
+  show(){
+    console.log('Cross works')
+  }
+
 }
