@@ -1,6 +1,12 @@
-# DataSclicingProj
+## DataSclicingProj
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2. It has two componets, data-module and chart-module. The former presents an add button with which you can add a table row field and a cancel button to remove any particular field. Please note that cancellation works pretty okay when displaying the application in larger screen, in laptop screen one might find a bit difficulty in cancelling its due to the container width I set which I thought of adjusting in later update. The latter component display a multi line chart with hardcoded data. 
+
+
+## Installing Packages
+After cloning the repository from github, run `npm i` in the terminal for installing neccessary packages in the beginning.
+This will download all the third party and angular packages required to run the application.
+
 
 ## Development server
 

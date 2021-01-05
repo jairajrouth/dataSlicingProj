@@ -1,22 +1,26 @@
 <div class="container">
   
-    <div class="tableRow" *ngFor="let row of rows; let i = index">
-        <div class="element">
-          <label id="id">ID</label>
-          <input class="inputData" type="text" />
-          <label id="start">START</label>
-          <input class="inputData" type="text" />
-          <label id="fieldName">END</label>
-          <input class="inputData" type="text" />
-          <label id="fieldName">MIN START</label>
-          <input class="inputData" type="text" />
-          <label id="fieldName">MIN END</label>
-          <input class="inputData" type="text" />
-         <button (click)="removeField(i)">
-             <span class="material-icons">cancel</span>
-            </button>
-        </div>
-    </div>
+  <form action="">
+    <div class="tableRow" *ngFor="let tableData of tableDatas; let i = index">
+      <div class="element">
+        <label id="id">ID</label>
+        <input class="inputData" type="text" name="id" value="{{tableData.id}}" [(ngModel)]="tableData.id" />
+        <label id="start">START</label>
+        <input class="inputData" type="text" name="start" value="{{tableData.start}}" [(ngModel)]="tableData.start" />
+        <label id="fieldName">END</label>
+        <input class="inputData" type="text" name="end" value="{{tableData.end}}" [(ngModel)]="tableData.end" />
+        <label id="fieldName">MIN START</label>
+        <input class="inputData" type="text" name="min_start" value="{{tableData.min_start}}" [(ngModel)]="tableData.min_start" />
+        <label id="fieldName">MIN END</label>
+        <input class="inputData" type="text" name="min_end" value="{{tableData.min_end}}" [(ngModel)]="tableData.min_end" />
+       <button (click)="removeField(i)">
+           <span class="material-icons">cancel</span>
+          </button>
+      </div>
+  </div>
+  </form>
+  
+  
   <button mat-stroked-button class="addNew" (click)="addField()">
     <span class="material-icons">add</span>
   </button>
